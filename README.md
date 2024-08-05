@@ -10,27 +10,27 @@ A TypeScript package for retrieving country data including country names, codes,
 - **Access Country Data Map:** Directly access detailed country information.
 
 ## Usage
-
 ### Importing Functions
-
 You can import and use the functions and types from the package as follows:
 
 ```typescript
 import { getCountryCallingCode, getCountryFlag, getCountries } from 'country-explorer';
 import type { CountryCode, Country } from 'country-explorer';
+```
 
-### Example Usage
 
 #### Get Country Calling Code
 ```typescript
 const code: CountryCode = 'US';
 const callingCode = getCountryCallingCode(code);
-console.log(callingCode); // Output: "+1"```
+console.log(callingCode); // Output: "+1"
+```
 
 #### Get Country Flag
 ```typescript
 const flag = getCountryFlag(code);
-console.log(flag); // Output: 🇺🇸```
+console.log(flag); // Output: 🇺🇸
+```
 
 ## Contributing
 
