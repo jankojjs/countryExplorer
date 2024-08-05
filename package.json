@@ -1,15 +1,29 @@
 {
-  "name": "uilib",
+  "name": "country-explorer",
   "version": "1.0.0",
-  "description": "",
+  "description": "A package for retrieving country data including country codes, calling codes, country names, flags and more.",
   "type": "module",
   "main": "dist/index.js",
+  "author": "Janko Stanic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jankojjs/countryExplorer"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "package.json"
+  ],
   "scripts": {
     "build": "rimraf dist && tsc --emitDeclarationOnly && rollup --config",
+    "prepublishOnly": "npm run build",
     "tsc": "tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.24.9",
     "@babel/plugin-transform-class-properties": "^7.24.7",
