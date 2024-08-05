@@ -25,12 +25,12 @@ import type { CountryCode, Country } from 'country-explorer';
 ```typescript
 const code: CountryCode = 'US';
 const callingCode = getCountryCallingCode(code);
-console.log(callingCode); // Output: "+1"
+console.log(callingCode); // Output: "+1"```
 
 #### Get Country Flag
 ```typescript
 const flag = getCountryFlag(code);
-console.log(flag); // Output: 🇺🇸
+console.log(flag); // Output: 🇺🇸```
 
 ## Contributing
 
