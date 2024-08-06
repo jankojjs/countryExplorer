@@ -14,7 +14,13 @@ A TypeScript package for retrieving country data including country names, codes,
 You can import and use the functions and types from the package as follows:
 
 ```typescript
-import { getCountryCallingCode, getCountryFlag, getCountries } from 'country-explorer';
+import { 
+    getCountryCallingCode, 
+    getCountryFlag, 
+    getCountries, 
+    getCountryByCallingAndAreaCode, 
+    getCountry 
+} from 'country-explorer';
 import type { CountryCode, Country } from 'country-explorer';
 ```
 
@@ -23,7 +29,23 @@ import type { CountryCode, Country } from 'country-explorer';
 ```typescript
 const code: CountryCode = 'US';
 const callingCode = getCountryCallingCode(code);
-console.log(callingCode); // Output: "+1"
+console.log(callingCode); // Output: "1"
+```
+
+
+#### Get Country By Country Code
+```typescript
+const code: CountryCode = 'US';
+const country = getCountry(code);
+console.log(country); // Output: { countryCode: 'US', flag: '🇺🇸', callingCode: '1', name: 'United States' }
+```
+
+
+#### Get Country By Calling Code And Area Code
+```typescript
+const callingCode = "381";
+const countryCode = getCountryByCallingAndAreaCode(callingCode);
+console.log(countryCode); // Output: "RS"
 ```
 
 #### Get Country Flag
