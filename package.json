@@ -1,6 +1,6 @@
 {
   "name": "country-explorer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A package for retrieving country data including country codes, calling codes, country names, flags and more.",
   "type": "module",
   "main": "dist/index.cjs.js",
