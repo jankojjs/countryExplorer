@@ -7,11 +7,18 @@ import terser from "@rollup/plugin-terser";
 
 export default {
   input: "src/index.ts",
-  output: {
-    file: "dist/index.js",
-    format: "esm",
-    sourcemap: true,
-  },
+  output: [
+    {
+      file: "dist/index.esm.js",
+      format: "esm",
+      sourcemap: true,
+    },
+    {
+      file: "dist/index.cjs.js",
+      format: "cjs",
+      sourcemap: true,
+    },
+  ],
   plugins: [
     resolve({
       extensions: [".js", ".ts"],
@@ -21,6 +28,7 @@ export default {
     babel({
       exclude: "node_modules/**",
       babelHelpers: "bundled",
+      extensions: [".js", ".ts"],
     }),
     terser(),
   ],
